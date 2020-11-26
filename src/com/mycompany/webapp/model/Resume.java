@@ -1,5 +1,7 @@
 package com.mycompany.webapp.model;
 
+import java.util.Objects;
+
 /**
  * Initial resume class
  */
@@ -20,4 +22,11 @@ public class Resume {
     public String toString() {
         return uuid;
     }
+
+    @Override
+    public boolean equals(Object o) {
+        Resume r = (Resume) o;
+        return this.uuid.equals((r.uuid));
+    }
+
 }
